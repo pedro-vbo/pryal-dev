@@ -1,4 +1,5 @@
 <template>
+PEDRO
   <!--begin::Dashboard-->
   <div class="row gy-5 g-xl-8">
     <div class="col-xxl-4">
