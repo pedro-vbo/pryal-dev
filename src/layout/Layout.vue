@@ -43,7 +43,10 @@
   </div>
   <!-- end:: Body -->
   <KTScrollTop></KTScrollTop>
+  <KTExplore></KTExplore>
+  <KTDrawerMessenger></KTDrawerMessenger>
   <KTUserMenu></KTUserMenu>
+  <KTCreateApp></KTCreateApp>
 </template>
 
 <script lang="ts">
@@ -58,6 +61,9 @@ import KTToolbar from "@/layout/toolbar/Toolbar.vue";
 import KTScrollTop from "@/layout/extras/ScrollTop.vue";
 import KTUserMenu from "@/layout/header/partials/ActivityDrawer.vue";
 import KTLoader from "@/components/Loader.vue";
+import KTCreateApp from "@/components/modals/CreateAppModal.vue";
+import KTExplore from "@/layout/extras/Explore.vue";
+import KTDrawerMessenger from "@/layout/extras/DrawerMessenger.vue";
 import { Actions } from "@/store/enums/StoreEnums";
 import { MenuComponent } from "@/assets/ts/components/index.ts";
 import {
@@ -70,6 +76,7 @@ import {
   themeLightLogo,
   themeDarkLogo
 } from "@/core/helpers/config.ts";
+import { isDocPage } from "@/core/helpers/documentation.ts";
 
 export default defineComponent({
   name: "Layout",
@@ -79,7 +86,10 @@ export default defineComponent({
     KTFooter,
     KTToolbar,
     KTScrollTop,
+    KTCreateApp,
     KTUserMenu,
+    KTExplore,
+    KTDrawerMessenger,
     KTLoader
   },
   setup() {
@@ -135,6 +145,7 @@ export default defineComponent({
       subheaderDisplay,
       pageTitle,
       breadcrumbs,
+      isDocPage,
       themeLightLogo,
       themeDarkLogo
     };

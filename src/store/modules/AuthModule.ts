@@ -131,7 +131,6 @@ export default class AuthModule extends VuexModule implements UserAuthInfo {
 
   @Action
   [Actions.VERIFY_AUTH]() {
-    return true;
     if (JwtService.getToken()) {
       ApiService.setHeader();
       ApiService.get("verify")
